@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flexbox Test</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .box {
+      border: solid 3px dodgerblue;
+      font-size: 30px;
+      margin: 5px;
+      padding: 20px;
+      text-align: center;
+      width: 100px;
+      height: 100px;
+    }
+
+    .flex-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 20px;
+      height: 400px;
+      background: #f5f5f5;
+      padding: 20px;
+    }
+
+    .grow {
+      flex-grow: 1;
+    }
+
+    .order-last {
+      order: 999;
+    }
+
+    .align-end {
+      align-self: flex-end;
+    }
+
+    .big {
+      font-size: 50px;
+      background-color: #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+  <div class="flex-container">
+    <div class="box">1</div>
+    <div class="box grow">2</div>
+    <div class="box order-last">3</div>
+    <div class="box big">4</div>
+    <div class="box align-end">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+  </div>
+</body>
+</html>
